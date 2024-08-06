@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.content {
+    padding: 20px;
+    height: 2000px; /* Just for demonstration, add enough height to show scrolling */
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    display: none; /* Hide button initially */
+}
+
+.scroll-to-top:hover {
+    background-color: #0056b3;
+}
+
+#top {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* CSS for making button appear after a certain scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+body.scrolled .scroll-to-top {
+    display: block;
+}
